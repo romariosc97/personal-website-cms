@@ -1,36 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-/* @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('./../font/Poppins-Light.ttf') format('woff2');
+.sidebar-link{
+    transition: 0.3s color ease-in-out;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
 }
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./../font/Poppins-Regular.ttf') format('woff2');
+.sidebar-link:hover{
+    color: #3F72AF;
 }
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('./../font/Poppins-Medium.ttf') format('woff2');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('./../font/Poppins-SemiBold.ttf') format('woff2');
-}
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('./../font/Poppins-Bold.ttf') format('woff2');
-} */

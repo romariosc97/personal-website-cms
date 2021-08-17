@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { Box } from "@chakra-ui/react";
-function Home() {
+function Portfolio() {
     return (
         <Fragment>
-            Contenido de Home
+            Contenido de Portfolio
         </Fragment>
     )
 }
 
-export default Home;
+export default Portfolio;

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Box } from "@chakra-ui/react";
+
 function Portfolio() {
     return (
         <Fragment>

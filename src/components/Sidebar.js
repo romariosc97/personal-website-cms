@@ -3,14 +3,11 @@ import {
     Link
 } from 'react-router-dom';
 import { Box, Stack, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faAward, faFolder } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faAward, faFolder } from '@fortawesome/free-solid-svg-icons';
 function Sidebar() {
     return (
         <Fragment>
-            <Box w="100%" p={4} borderBottomWidth="1px">
-                Romario CMS
-            </Box>
             <Box w="100%" p={4} minH="500px">
                 <Accordion defaultIndex={[0]} allowMultiple>
                     <AccordionItem border="none">

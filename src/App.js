@@ -3,12 +3,13 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Home from './views/Home';
 import Certification from './views/Certification';
 import Portfolio from './views/Portfolio';
 
 import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
 
 import './assets/css/Main.css';
 
@@ -17,12 +18,13 @@ function App() {
     <Router>
       <Box w="100%" display="flex" flexDirection="rows">
         <Box w="17.5%" borderBottomWidth="1px" borderRightWidth="1px">
+          <Box w="100%" p={4} borderBottomWidth="1px" justifyContent="center" alignItems="center" display="flex" height="75px">
+            <Text fontSize="xl" fontWeight="700">ROMARIO CMS</Text>
+          </Box>
           <Sidebar />
         </Box>
         <Box w="82.5%" borderBottomWidth="1px">
-          <Box w="100%" p={4} borderBottomWidth="1px">
-              Menu de navegacion
-          </Box>
+          <Navbar />
           <Box w="100%" p={4}>
             <Switch>
               <Route exact path="/">

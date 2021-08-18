@@ -6,7 +6,9 @@ import {
 import { Box, Text } from "@chakra-ui/react";
 import Home from './views/Home';
 import Certification from './views/Certification';
+import CertificationNew from './views/CertificationNew';
 import Portfolio from './views/Portfolio';
+import PortfolioNew from './views/PortfolioNew';
 
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
@@ -19,13 +21,13 @@ function App() {
       <Box w="100%" display="flex" flexDirection="rows">
         <Box w="17.5%" borderBottomWidth="1px" borderRightWidth="1px">
           <Box w="100%" p={4} borderBottomWidth="1px" justifyContent="center" alignItems="center" display="flex" height="75px">
-            <Text fontSize="xl" fontWeight="700">ROMARIO CMS</Text>
+            <Text fontSize="xl" fontWeight="700" color="#112D4E">ROMARIO CMS</Text>
           </Box>
           <Sidebar />
         </Box>
         <Box w="82.5%" borderBottomWidth="1px">
           <Navbar />
-          <Box w="100%" p={4}>
+          <Box w="100%" p={8} minH="700px" backgroundColor="#F9F7F7" color="#112D4E">
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -33,8 +35,14 @@ function App() {
               <Route exact path="/certification">
                 <Certification />
               </Route>
+              <Route exact path="/certification/new">
+                <CertificationNew />
+              </Route>
               <Route exact path="/portfolio">
                 <Portfolio />
+              </Route>
+              <Route exact path="/portfolio/new">
+                <PortfolioNew />
               </Route>
             </Switch>
           </Box>

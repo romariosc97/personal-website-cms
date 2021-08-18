@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .sidebar-link{
-    transition: 0.3s color ease-in-out;
-    margin-bottom: 0.25rem;
-    margin-top: 0.25rem;
+    transition: 0.3s all ease-in-out;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3rem;
 }
-.sidebar-link:hover{
+.sidebar-link:first-child{
+    margin-top: 0.5rem;
+}
+.sidebar-link:hover, .sidebar-link.active, .sidebar-link:focus{
     color: #3F72AF;
+}
+.sidebar-link.active{
+    background: rgba(63, 114, 175, 0.05);
+    border-right: 3px solid #3F72AF;
+}
+.sidebar-link:focus{
+    background: rgba(63, 114, 175, 0.05);
 }

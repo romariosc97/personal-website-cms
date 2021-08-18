@@ -30,7 +30,7 @@ function Sidebar() {
                     </MenuItem>
                     <MenuDivider />
                     <Box px="0.8rem">
-                        <Text as="span" fontSize="md" fontWeight="400">Modo oscuro</Text>
+                        <Text as="span" fontSize="sm" fontWeight="400">Modo oscuro</Text>
                         <Switch size="sm" float="right" />
                     </Box>
                 </MenuList>

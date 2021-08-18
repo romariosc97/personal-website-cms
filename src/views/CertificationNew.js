@@ -5,15 +5,15 @@ import { faAward } from '@fortawesome/free-solid-svg-icons';
            
 import Breadcrumb from './../components/Breadcrumb';
 
-function Certification() {
+function CertificationNew() {
     return (
         <Fragment>
-            <Breadcrumb path={[{name: "Certificaciones", icon: faAward}]} />
+            <Breadcrumb path={[{name: "Certificaciones", path: "/certification", icon: faAward}, {name: "Nuevo"}]} />
             <Box w="100%" p={8} minH="500px" color="#112D4E" backgroundColor="#FFF" borderRadius="xl">
-                Certification
+                CertificationNew
             </Box>
         </Fragment>
     )
 }
 
-export default Certification;
+export default CertificationNew;

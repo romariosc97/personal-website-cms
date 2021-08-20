@@ -2,14 +2,19 @@ import React, {  } from 'react';
 import { Table, Tr, Th, Td, Tbody, Thead, Link } from "@chakra-ui/react";
 function Datatable(props) {
     const data = props.data || [];
+    const labels = props.labels || [];
+    const columns = props.columns || [];
     return (
         <Table variant="simple" size="sm">
             <Thead>
                 <Tr>
-                    <Th>ID</Th>
-                    <Th>Nombre</Th>
-                    <Th>Imagen</Th>
-                    <Th>URL</Th>
+                    {
+                        labels.map((v, k) => {
+                            return(
+                                <Th key={k}>{v}</Th>
+                            )
+                        })
+                    }
                 </Tr>
             </Thead>
             <Tbody>
@@ -17,14 +22,21 @@ function Datatable(props) {
                     data.map((v, k) => {
                         return(
                             <Tr key={k}>
-                                <Td>{v.id}</Td>
-                                <Td>{v.name}</Td>
-                                <Td wordBreak="break-all">{v.image}</Td>
-                                <Td>
-                                    <Link wordBreak="break-all" target="_blank" href={v.url}>
-                                        {v.url}
-                                    </Link>
-                                </Td>
+                                {
+                                    columns.map((va, ka) => {
+                                        return(
+                                            <Td key={ka} wordBreak={va==='image' ? 'break-all' : ''}>
+                                                {
+                                                    va==='url' ? 
+                                                    <Link wordBreak="break-all" target="_blank" href={v[va]}>
+                                                        {v[va]}
+                                                    </Link> 
+                                                    : v[va]
+                                                }
+                                            </Td>
+                                        )
+                                    })
+                                }
                             </Tr>
                         )
                     })

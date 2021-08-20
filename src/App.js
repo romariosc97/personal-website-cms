@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,13 +16,23 @@ import Navbar from './components/Navbar';
 
 import './assets/css/Main.css';
 
+import { GlobalContext } from './context/GlobalContext';
+
 function App() {
+  const { darkMode } = useContext(GlobalContext);
   return (
     <Router>
-      <Box w="100%" display="flex" flexDirection="rows">
-        <Box w="17.5%" borderBottomWidth="1px" borderRightWidth="1px">
-          <Box w="100%" p={4} borderBottomWidth="1px" justifyContent="center" alignItems="center" display="flex" height="75px">
-            <Text fontSize="xl" fontWeight="700" color="#112D4E">ROMARIO CMS</Text>
+      <Box className={darkMode ? 'dark-mode' : ''} w="100%" display="flex" flexDirection="rows">
+        <Box w="17.5%" borderBottomWidth="1px" borderColor={darkMode ? '#1089FF' : ''}>
+          <Box w="100%" p={4} borderBottomWidth="1px" justifyContent="center" alignItems="center" display="flex" height="75px"
+            borderRightWidth="1px"
+            transition="0.2s all ease-in-out" backgroundColor={darkMode ? '#1089FF' : ''}  borderColor={darkMode ? '#1089FF' : ''}
+          >
+            <Text transition="0.2s all ease-in-out" fontSize="xl" fontWeight="700" 
+              color={darkMode ? '#F9F7F7' : '#112D4E'}
+            >
+              ROMARIO CMS
+            </Text>
           </Box>
           <Sidebar />
         </Box>

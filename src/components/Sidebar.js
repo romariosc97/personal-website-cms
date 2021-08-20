@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import {
     Link,
     useLocation
@@ -6,12 +6,17 @@ import {
 import { Box, Stack, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faAward, faFolder } from '@fortawesome/free-solid-svg-icons';
+import { GlobalContext } from './../context/GlobalContext';
+  
 function Sidebar() {
+    const { darkMode } = useContext(GlobalContext);
     const location = useLocation();
     const currentPath = location.pathname;
     return (
         <Fragment>
-            <Box w="100%" py={4} minH="700px" color="#112D4E">
+            <Box w="100%" py={4} minH="700px" transition="0.2s all ease-in-out" borderRightWidth="1px" 
+                backgroundColor={darkMode ? '#112D4E' : ''} color={darkMode ? '#F9F7F7' : '#112D4E'}
+            >
                 <Accordion defaultIndex={[0]} allowMultiple>
                     <AccordionItem border="none" my={1}>
                         <h2>

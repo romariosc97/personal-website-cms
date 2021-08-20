@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .sidebar-link{
-    transition: 0.3s all ease-in-out;
+    transition: 0.2s all ease-in-out;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 3rem;
@@ -13,8 +13,21 @@
 }
 .sidebar-link.active{
     background: rgba(63, 114, 175, 0.05);
-    border-right: 3px solid #3F72AF;
+    border-right: 4px solid #3F72AF;
 }
 .sidebar-link:focus{
     background: rgba(63, 114, 175, 0.05);
+}
+
+.dark-mode .sidebar-link:hover, .dark-mode .sidebar-link.active, .dark-mode .sidebar-link:focus{
+    color: #1089FF;
+}
+
+.dark-mode .sidebar-link.active{
+    background: rgba(16, 137, 255, 0.15);
+    border-right: 4px solid #1089FF;
+}
+
+.dark-mode .sidebar-link:focus{
+    background: rgba(16, 137, 255, 0.15);
 }

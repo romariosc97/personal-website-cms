@@ -14,7 +14,7 @@ function Sidebar() {
     const currentPath = location.pathname;
     return (
         <Fragment>
-            <Box w="100%" py={4} minH="700px" transition="0.2s all ease-in-out" borderRightWidth="1px" 
+            <Box w="100%" py={4} minH="700px" h="100%" transition="0.2s all ease-in-out" borderRightWidth="1px" 
                 backgroundColor={darkMode ? '#112D4E' : ''} color={darkMode ? '#F9F7F7' : '#112D4E'}
             >
                 <Accordion defaultIndex={[0]} allowMultiple>

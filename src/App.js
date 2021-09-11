@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <Box className={darkMode ? 'dark-mode' : ''} w="100%" display="flex" flexDirection="rows">
-        <Box w="17.5%" borderBottomWidth="1px" borderColor={darkMode ? '#1089FF' : ''}>
+        <Box w="17.5%" borderColor={darkMode ? '#1089FF' : ''}>
           <Box w="100%" p={4} borderBottomWidth="1px" justifyContent="center" alignItems="center" display="flex" height="75px"
             borderRightWidth="1px"
             transition="0.2s all ease-in-out" backgroundColor={darkMode ? '#1089FF' : ''}  borderColor={darkMode ? '#1089FF' : ''}
@@ -38,7 +38,7 @@ function App() {
         </Box>
         <Box w="82.5%" borderBottomWidth="1px">
           <Navbar />
-          <Box w="100%" p={8} minH="700px" backgroundColor="#F9F7F7" color="#112D4E">
+          <Box w="100%" p={8} minH="700px" h="100%" backgroundColor="#F9F7F7" color="#112D4E">
             <Switch>
               <Route exact path="/">
                 <Home />

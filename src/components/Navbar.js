@@ -12,7 +12,7 @@ function Sidebar() {
     };
     return (
         <Box w="100%" p={4} borderBottomWidth="1px" height="75px" display="flex" justifyContent="flex-end" flexDirection="row"
-            backgroundColor={darkMode ? '#1089FF' : ''} borderColor={darkMode ? '#1089FF' : ''}
+            transition="0.2s all ease-in-out" backgroundColor={darkMode ? '#1089FF' : ''} borderColor={darkMode ? '#1089FF' : ''}
         >
             <Menu>
                 <MenuButton display="block">
